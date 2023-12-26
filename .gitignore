@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+src/pages/Home.jsx
+src/pages/Home.jsx
+*.jsx

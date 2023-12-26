@@ -2,15 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  Box,
-  Flex,
-  FormControl,
-  FormLabel,
-  Input,
-  Button,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Flex, Button, Text } from '@chakra-ui/react';
 import image from '../../public/img/left-side.png';
 
 export default function Login() {
@@ -74,7 +66,7 @@ export default function Login() {
     >
       {/* Left Quarter: Image with Buttons */}
       <Box
-        flex={{ base: 'none', md: '1', lg: '1', xl: '1.5' }}
+        flex={{ base: '1', md: '1.5' }}
         bg="white"
         color="white"
         p={8}
@@ -88,44 +80,47 @@ export default function Login() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            borderRadius: '4px', // Add border-radius to the image
           }}
         />
 
         {/* Buttons */}
-        <Flex direction="column" mt={-400} ml={500}>
-          <Flex mb={1}>
+        <Flex direction={{ base: 'column', md: 'row' }} mt={{ base: 0, md: '-47%' }} ml={{ base: 0, md: '60%' }}>
+          <Flex direction={{ base: 'column' }} mb={{ base: 2, md: 0 }}>
             <Button
               colorScheme="rgba(243, 205, 44, 1)"
               color="#F3CD2C"
-              mr={2}
+              mb={{ base: 2, md: 2 }}
+              mr={{ base: 0, md: 2 }}
               variant="outline"
               cursor="context-menu"
             >
               UNLOCK YOUR
             </Button>
             <Button
+              colorScheme="rgba(243, 205, 44, 1)"
+              color="#F3CD2C"
+              variant="outline"
+              cursor="context-menu"
+            >
+              POTENTIAL WITH
+            </Button>
+          </Flex>
+          <Flex direction={{ base: 'column' }}>
+            <Button
               colorScheme="custom"
+              mb={{ base: 2, md: 2 }}
               color={currentButton2Info.textColor}
               bgColor={currentButton2Info.bgColor}
               cursor="context-menu"
             >
               {currentButton2Info.text}
             </Button>
-          </Flex>
-          <Flex>
             <Button
               colorScheme="rgba(243, 205, 44, 1)"
               color="#F3CD2C"
               variant="outline"
-              mr={2}
-              cursor="context-menu"
-            >
-              POTENTIAL WITH
-            </Button>
-            <Button
-              colorScheme="rgba(243, 205, 44, 1)"
-              color="#F3CD2C"
-              variant="outline"
+              ml={{ base: 2, md: 2 }}
               cursor="context-menu"
             >
               SOULINCOME
@@ -137,12 +132,12 @@ export default function Login() {
       {/* Right Three-Quarters: Login Form */}
       <Box flex="1" p={{ base: 4, md: 8 }} bg="rgba(27, 187, 132, 1)">
         <Box
-          width={{ base: '100%', md: '300px' }}
+          width="100%"
           mx="auto"
           textAlign="center"
-          mt="37%" // Adjusted margin-top for centering
+          mt={{ base: '25%', md: '37%' }}
         >
-          <Text fontSize="4xl" mb={6} color="rgba(16, 2, 63, 1)">
+          <Text fontSize={{ base: '2xl', md: '4xl' }} mb={6} color="rgba(16, 2, 63, 1)">
             sou
             <samp style={sampStyle}>l</samp>
             <samp style={sampStyle2}>i</samp>
@@ -150,6 +145,7 @@ export default function Login() {
           </Text>
           <Flex justify="center">
             <Button
+              size={{ base: 'md', md: 'lg' }}
               colorScheme="custom"
               color="white"
               bgColor="rgba(17, 212, 157, 1)"
@@ -160,6 +156,7 @@ export default function Login() {
               LOG IN
             </Button>
             <Button
+              size={{ base: 'md', md: 'lg' }}
               colorScheme="custom"
               color="rgba(17, 212, 157, 1)"
               variant="outline"

@@ -94,7 +94,7 @@ export default function Login() {
     >
       {/* Left Quarter: Image with Buttons */}
       <Box
-        flex={{ base: 'none', md: '1', lg: '1', xl: '1.5' }}
+        flex={{ base: '1', md: '1.5' }}
         bg="white"
         color="white"
         p={8}
@@ -108,44 +108,47 @@ export default function Login() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            borderRadius: '4px', // Add border-radius to the image
           }}
         />
 
         {/* Buttons */}
-        <Flex direction="column" mt={-400} ml={500}>
-          <Flex mb={1}>
+        <Flex direction={{ base: 'column', md: 'row' }} mt={{ base: 0, md: '-47%' }} ml={{ base: 0, md: '60%' }}>
+          <Flex direction={{ base: 'column' }} mb={{ base: 2, md: 0 }}>
             <Button
               colorScheme="rgba(243, 205, 44, 1)"
               color="#F3CD2C"
-              mr={2}
+              mb={{ base: 2, md: 2 }}
+              mr={{ base: 0, md: 2 }}
               variant="outline"
               cursor="context-menu"
             >
               UNLOCK YOUR
             </Button>
             <Button
+              colorScheme="rgba(243, 205, 44, 1)"
+              color="#F3CD2C"
+              variant="outline"
+              cursor="context-menu"
+            >
+              POTENTIAL WITH
+            </Button>
+          </Flex>
+          <Flex direction={{ base: 'column' }}>
+            <Button
               colorScheme="custom"
+              mb={{ base: 2, md: 2 }}
               color={currentButton2Info.textColor}
               bgColor={currentButton2Info.bgColor}
               cursor="context-menu"
             >
               {currentButton2Info.text}
             </Button>
-          </Flex>
-          <Flex>
             <Button
               colorScheme="rgba(243, 205, 44, 1)"
               color="#F3CD2C"
               variant="outline"
-              mr={2}
-              cursor="context-menu"
-            >
-              POTENTIAL WITH
-            </Button>
-            <Button
-              colorScheme="rgba(243, 205, 44, 1)"
-              color="#F3CD2C"
-              variant="outline"
+              ml={{ base: 2, md: 2 }}
               cursor="context-menu"
             >
               SOULINCOME
