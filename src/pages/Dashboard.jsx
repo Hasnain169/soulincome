@@ -27,14 +27,14 @@ const Dashboard = () => {
 
       <GridItem colSpan={{ base: 6, lg: 4, xl: 5 }} p={{ base: '20px', lg: '40px' }} bg="#E8EFF0" overflow="hidden">
         <Box>
-          <Image src={dashboardImage1} alt="Dashboard Image" mb={0} boxSize={{ base: '100%', lg: '80%' }} />
+          <Image src={dashboardImage1} alt="Dashboard Image" mb={0} boxSize={{ base: '100%', lg: '100%' }} />
 
           <Image
             src={dashboardImage2}
             alt="Dashboard Image"
-            boxSize={{ base: '100%', lg: '55%' }}
-            mt={{ base: '-5%', lg: '-7%' }}
-            ml={{ base: '0', lg: '4.5%' }}
+            boxSize={{ base: '100%', lg: '70%' }}
+            mt={{ base: '-5%', lg: '-9%' }}
+            ml={{ base: '0', lg: '5%' }}
           />
 
           <Text fontSize="xl" fontWeight="bold" mb={4}>
